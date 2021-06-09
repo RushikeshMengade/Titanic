@@ -1,0 +1,161 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Life Prediction</title>
+
+    <!--css stylesheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div id="backgroundImg">
+
+    <div class="heading">
+      <h1>LIFE PREDICTION</h1>
+    </div>
+
+    <form action="\predict" method="post">
+    <section class="container top">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Gender</h5>
+              <input type="text" name="Gender"  list="Gender" placeholder="SELECT GENDER">
+              <datalist id="Gender">
+                <option value="MALE"/>
+                <option value="FEMALE"/>
+              </datalist>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Age</h5>
+              <input type="number" step="any" name="Age"  placeholder="ENTER AGE">
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+    <section class="container mid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Title</h5>
+              <input type="text" name="Title"  list="Title" placeholder="SELECT TITLE">
+              <datalist id="Title">
+                <option value="MISS"/>
+                <option value="MRS"/>
+                <option value="MR"/>
+                <option value="MASTER"/>
+                <option value="DR"/>
+                <option value="MAJOR"/>
+                <option value="MLLE"/>
+                <option value="COL"/>
+                <option value="COUNTESS"/>
+                <option value="SIR"/>
+                <option value="MME"/>
+                <option value="LADY"/>
+                <option value="MS"/>
+                <option value="REV"/>
+                <option value="CAP"/>
+                <option value="DON"/>
+                <option value="JONKHEER"/>
+              </datalist>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Embarked</h5>
+              <input type="text" name="Embarked"  list="Embarked" placeholder="SELECT CITY">
+              <datalist id="Embarked">
+                  <option value="SOUTHAMPON"/>
+                  <option value="CHERBOURG"/>
+                  <option value="QUEENSTOW'S"/>
+              </datalist>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container midBottom">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Class</h5>
+              <input type="text" name="Class"  list="Class" placeholder="SELECT CLASS">
+              <datalist id="Class">
+                <option value="FIRST CLASS"/>
+                <option value="SECOND CLASS"/>
+                <option value="THIRD CLASS"/>
+              </datalist>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Fare</h5>
+              <input type="number" step="any" name="Fare" id="Fare" placeholder="ENTER FARE">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container bottom">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">FamilySize</h5>
+              <input type="text"  name="FamilySize"  list="FamilySize" placeholder="SELECT SIZE">
+              <datalist id="FamilySize">
+                <option value="1"/>
+                <option value="2"/>
+                <option value="3"/>
+                <option value="4"/>
+                <option value="5"/>
+              </datalist>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+      
+  </form>
+  <br>
+  <br>
+  <h3 align="center">{{prediction_text}}</h3>
+  <br>
+  <br>
+  </div>
+  </body>
+</html>

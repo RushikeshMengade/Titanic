@@ -1,0 +1,31 @@
+
+.heading{
+  text-align: center;
+  padding: 55px;
+  color: black;
+  font-size: 30px;
+}
+
+.top{
+  padding-bottom: 20px;
+}
+
+.mid{
+  padding-bottom: 20px;
+}
+
+.midBottom{
+  padding-bottom: 20px;
+}
+
+.bottom{
+  padding-bottom: 50px;
+}
+
+
+
+#backgroundImg{
+  background-image: url("image/titanic.jpg");
+  height: 750px;
+  /* width: 1500px; */
+}
